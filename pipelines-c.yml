@@ -2,10 +2,12 @@
 # We are setting up a pipeline resource that references the security-lib-ci
 # pipeline and setting up a pipeline completion trigger so that our app-ci
 # pipeline runs when a run of the security-lib-ci pipeline completes
+trigger: none
+
 resources:
   pipelines:
-  - pipeline: pipelinec # Name of the pipeline resource.
-    source: pipeline-c # The name of the pipeline referenced by this pipeline resource.
+  - pipeline: pipeline-c # Name of the pipeline resource.
+    source: hmitsu.repositry1 (1) # The name of the pipeline referenced by this pipeline resource.
     project: repositry1 # Required only if the source pipeline is in another project
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
 
