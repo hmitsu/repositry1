@@ -8,5 +8,7 @@
 pool:
   vmImage: ubuntu-latest
 
+trigger: none
+
 steps:
 - bash: echo "pipelines-a runs first"
