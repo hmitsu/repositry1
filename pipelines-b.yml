@@ -2,6 +2,8 @@
 # We are setting up a pipeline resource that references the security-lib-ci
 # pipeline and setting up a pipeline completion trigger so that our app-ci
 # pipeline runs when a run of the security-lib-ci pipeline completes
+trigger: none
+
 resources:
   pipelines:
   - pipeline: pipelineb # Name of the pipeline resource.
